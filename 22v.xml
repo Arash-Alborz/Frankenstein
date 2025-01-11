@@ -32,48 +32,47 @@
     <body>
       <div type="page" n="22v" rend="verso">
         <pb facs="#p22v"/>
-        <metamark function="pagenumber"><num><hi rend="circled">78</hi></num></metamark>
+        <metamark function="pagenumber" hand="#MWS"><num><hi rend="circled" hand="#MWS">78</hi></num></metamark><lb/><lb/>
         <p>
-        so hideous as <hi rend="underline">He</hi>... I had gazed on him<lb/>
-        while unfinished; <del rend="crossedOut">and I thought</del> he<lb/>
+        so hideous as <hi rend="doubleUnderline">He</hi>. I had gazed on him<lb/>
+        while unfinished; <del hand="#MWS" rend="crossedOut">and I thought</del> he<lb/>
         was ugly then. But when those muscles<lb/>
         and joints were endued with motion<lb/>
-        it became a thing <del rend="crossedOut">to</del> such as even Dante<lb/>
+        it became a thing <del place="intralinear" type="crossedOut" hand="#MWS" rend="blackink">to</del> such as even Dante<lb/>
         could never have conceived.<lb/></p>
         <p>I passed the night wretchedly–<lb/>
-          sometimes my pulses beat so quickly and<lb/>
-          ha<add place="supralinear" hand="#MWS">r</add>dly that I felt the palpitation of<lb/>
+          sometimes my pulses beat so quickly <del place="intralinear" type="crossedOut" hand="#MWS">t</del> and<lb/>
+          ha<add place="intralinear" hand="#MWS"><metamark>^</metamark></add><add place="supralinear" hand="#MWS">r</add>dly that I felt the palpitation of<lb/>
           every artery: at others I nearly sunk<lb/>
-        to the ground <del rend="crossedOut">with</del>
-          <add place="above">thro</add> languor and ex-<lb/>
-          treme weakness.<del rend="crossedOut" hand="#PBS">Surely so wretched a</del><lb/>
-          <add place="marginleft" hand="#PBS">X<lb/>
-            and mingled<lb/>
-            with this hor<lb/>
-            ror I felt the<lb/>
-            bitterness of<lb/>
-            <del rend="crossedOut">disapp</del><lb/>
-            disappoint<lb/>
-            ment:<lb/></add>
-          <del rend="crossedOut" hand="#PBS">creature as I never before existed.</del><lb/>
+        to the ground <del hand="#MWS" rend="crossedOut">with</del>
+          <add place="supralinear" hand="#PBS" rend="blackink">thro</add> languor and ex-<lb/>
+          treme weakness. <del rend="crossedOut" hand="#MWS">Surely so wretched a</del><lb/>
+        <add place="marginleft" hand="#PBS">X<lb/>
+        and mingled<lb/>
+        with this hor<lb/>
+        ror I felt the<lb/>
+        bitterness of<lb/>
+        <del rend="crossedOut">disapp</del><lb/>
+        disappoint<lb/>
+        ment:<lb/></add>
+        <del rend="crossedOut" hand="#MWS">creature as I never before existed.</del><lb/>
           Dreams that had been my food and<lb/>
           rest for so long a space were now<lb/>
-          become a hell to me– <del rend="crossedOut">I</del> and the<lb/>
+          become a hell to me– <del hand="#MWS" rend="crossedOut">I</del> and the<lb/>
           change was so rapid, the overthrow<lb/>
         so complete.</p>
-        <p>Morning — dismal and wet — at leng <del rend="overwritten">ht</del>th<lb/>
-          dawned, and <del rend="crossedOut">to</del> discovered to my sleepless<lb/>
+        <p>Morning — dismal and wet — at leng <del hand="#MWS" rend="overwritten">ht</del>th<lb/>
+          dawned, and <del hand="#MWS" rend="crossedOut">to</del> discovered to my sleepless<lb/>
           and aching eyes the <unclear reason="ink blot">church</unclear> of Ingols-<lb/>
         stadt its white steeple &amp; <add place="supralinear" hand="#PBS"><del
-              rend="crossedOut">the</del></add>clock<add place="supralinear" hand="#PBS"
-                >its</add>" which<lb/>
-          pointed to the sixth<del rend="crossedOut">e</del> hour. The porter<lb/>
+              hand="#MWS" rend="crossedOut">the</del></add> <add place="supralinear" hand="#MWS"
+                >its</add>clock which<lb/>
+          pointed to the sixth<del hand="#MWS" rend="crossedOut">e</del> hour. The porter<lb/>
           opened the gates of the court which had<lb/>
           that night been my assylum and I<lb/>
-        issued into the streets, pacing<add place="supralinear" hand="#PBS">them</add>
-          with<lb/>
-          quick steps as if I <del rend="crossedOut">ough</del> sought to<lb/>
-        <add place="left_margin" hand="#PBS">avoid</add>the wretch whom I feared every
+        issued into the streets, pacing<add place="supralinear" hand="#PBS">them</add>with<lb/>
+          quick steps as if I <del hand="#MWS" rend="crossedOut">ough</del> sought to<lb/>
+        <add place="marginleft" hand="#PBS">avoid</add>the wretch whom I feared every
           turn-<lb/>
           ing in the street would present to<lb/></p></div>
     </body>

@@ -42,10 +42,8 @@ var mirador = Mirador.viewer({
   ]
 });
 
-
-// function to transform the text encoded in TEI with the xsl stylesheet "Frankenstein_text.xsl", this will apply the templates and output the text in the html <div id="text">
+// Function to transform the text encoded in TEI with the XSL stylesheet "Frankenstein_text.xsl"
 function documentLoader() {
-
     Promise.all([
       fetch(folio_xml).then(response => response.text()),
       fetch("Frankenstein_text.xsl").then(response => response.text())
@@ -66,11 +64,10 @@ function documentLoader() {
     .catch(function (error) {
       console.error("Error loading documents:", error);
     });
-  }
-  
-// function to transform the metadate encoded in teiHeader with the xsl stylesheet "Frankenstein_meta.xsl", this will apply the templates and output the text in the html <div id="stats">
-  function statsLoader() {
+}
 
+// Function to transform the metadata encoded in teiHeader with the XSL stylesheet "Frankenstein_meta.xsl"
+function statsLoader() {
     Promise.all([
       fetch(folio_xml).then(response => response.text()),
       fetch("Frankenstein_meta.xsl").then(response => response.text())
@@ -91,28 +88,76 @@ function documentLoader() {
     .catch(function (error) {
       console.error("Error loading documents:", error);
     });
-  }
+}
 
-  // Initial document load
-  documentLoader();
-  statsLoader();
-  // Event listener for sel1 change
-  function selectHand(event) {
-  var visible_mary = document.getElementsByClassName('#MWS');
-  var visible_percy = document.getElementsByClassName('#PBS');
-  // Convert the HTMLCollection to an array for forEach compatibility
-  var MaryArray = Array.from(visible_mary);
-  var PercyArray = Array.from(visible_percy);
-    if (event.target.value == 'both') {
-    //write an forEach() method that shows all the text written and modified by both hand (in black?). The forEach() method of Array instances executes a provided function once for each array element.
-     
-    } else if (event.target.value == 'Mary') {
-     //write an forEach() method that shows all the text written and modified by Mary in a different color (or highlight it) and the text by Percy in black. 
-     
-    } else {
-     //write an forEach() method that shows all the text written and modified by Percy in a different color (or highlight it) and the text by Mary in black.
-    
+documentLoader();
+statsLoader();
+
+function selectHand(event) {
+    const visible_mary = document.querySelectorAll('[hand="#MWS"]');
+    const visible_percy = document.querySelectorAll('[hand="#PBS"]');
+
+    var MaryArray = Array.from(visible_mary);
+    var PercyArray = Array.from(visible_percy);
+
+    if (event.target.value === 'both') {
+        MaryArray.forEach(element => {
+            element.style.color = 'black';
+            element.style.backgroundColor = 'transparent';
+        });
+        PercyArray.forEach(element => {
+            element.style.color = 'black';
+            element.style.backgroundColor = 'transparent';
+        });
+    } else if (event.target.value === 'Mary') {
+        MaryArray.forEach(element => {
+            element.style.color = '#7d3120';
+            element.style.backgroundColor = 'transparent'
+        });
+        PercyArray.forEach(element => {
+            element.style.color = '#AAAAAA';
+            element.style.backgroundColor = 'transparent';
+        });
+    } else if (event.target.value === 'Percy') {
+        PercyArray.forEach(element => {
+            element.style.color = '#7d3120';
+            element.style.backgroundColor = 'transparent';
+        });
+        MaryArray.forEach(element => {
+            element.style.color = '#AAAAAA';
+            element.style.backgroundColor = 'transparent';
+        });
     }
-  }
+}
+
+document.getElementById('sel-hand').addEventListener('change', selectHand);
+
+function toggleDeletions() {
+    const deletions = document.querySelectorAll('.del');
+    deletions.forEach(deletion => {
+        deletion.style.display = deletion.style.display === 'none' ? 'inline' : 'none';
+    });
+}
+
+document.getElementById('toggle-deletions').addEventListener('click', toggleDeletions);
+// Toggle reading version (hide deletions and show additions inline)
+function toggleReadingVersion() {
+  const deletions = document.querySelectorAll('.del');
+  const additions = document.querySelectorAll('.supraAdd');
+  
+  // Hide all deletions
+  deletions.forEach(deletion => deletion.style.display = 'none');
+  
+  // Set supralinear additions to inline (remove superscript style)
+  additions.forEach(addition => {
+      addition.style.fontStyle = 'normal';  // Remove italic style (if any)
+      addition.style.verticalAlign = 'unset';  // Remove vertical alignment (superscript)
+      addition.style.display = 'inline';  // Ensure it's inline like normal text
+  });
+}
+
+document.getElementById('toggle-reading').addEventListener('click', toggleReadingVersion);
+
+
 // write another function that will toggle the display of the deletions by clicking on a button
 // EXTRA: write a function that will display the text as a reading text by clicking on a button or another dropdown list, meaning that all the deletions are removed and that the additions are shown inline (not in superscript)

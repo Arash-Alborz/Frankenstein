@@ -1,6 +1,14 @@
 body {
-
+    font-family: "Georgia", sans-serif;
+    color: black;
+    background-color: #e8dccc;
 }
+
+.navbar {
+    background: linear-gradient(to right, #7c917d, #7c917d);
+    color: rgb(13, 7, 7);
+}
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -8,6 +16,20 @@ body {
 
 img {
     max-width: 100%;
+    margin-left: 50px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.mary-photo, .percy-photo {
+    width: 250px;
+    height: auto;
+    border-radius: 5px;
+    margin: 5px;
 }
 
 p {
@@ -32,4 +54,107 @@ p {
     display: none !important;
 }
 
+.add {
+    font-family: "Georgia", sans-serif;
+    color: #748174;
+}
 
+.del {
+    color: #748174;
+    text-decoration: line-through;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.page-list li a {
+    color: #313131;
+}
+
+.page-list li a:hover {
+    color: #fcf762;
+}
+
+a {
+    color: #0c0c06;
+    text-decoration: none;
+}
+
+.supraAdd {
+    font-family: "Georgia", sans-serif;
+    font-style: italic;
+    vertical-align: super;
+    font-size: smaller;
+    top: -0.5em;
+    position: relative;
+}
+
+.doubleUnderline {
+    text-decoration-line: underline;
+    text-decoration-style: double;
+}
+
+.right-align {
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 10px; /* Optional: adjust to create spacing */
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    margin: 10px 20px; /* Adjust spacing */
+    gap: 10px; /* Space between buttons */
+    position: relative;
+    z-index: 1000; /* Ensure it stays above the navbar */
+}
+
+.navigation-buttons .btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff; /* Bootstrap blue */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-buttons .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.circled {
+    display: inline-block;
+    width: 2em;  /* Adjust size */
+    height: 2em;
+    line-height: 1.5em;
+    border: 2px solid rgb(49, 46, 46);
+    border-radius: 50%;  /* Perfect circle */
+    text-align: center;
+    font-size: 1em;  /* Adjust text size */
+    vertical-align: middle;
+}
+
+button {
+    padding: 6px 15px;
+    margin: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }

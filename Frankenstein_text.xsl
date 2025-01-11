@@ -40,18 +40,53 @@
     </xsl:template>
     
     <xsl:template match="tei:div">
-        <div class="#MWS"><xsl:apply-templates/></div>
+        <div class="#MWS">
+            <xsl:apply-templates/></div>
+    </xsl:template>
+    <xsl:template match="tei:head">
+    <div hand="#MWS">
+        <xsl:apply-templates/>
+    </div>
     </xsl:template>
     
     <xsl:template match="tei:p">
-        <p><xsl:apply-templates/></p>
+    <p hand="#MWS">
+        <xsl:apply-templates/>
+    </p>
     </xsl:template>
 
-  
-    <xsl:template match="tei:add[@place = 'marginleft']">
-        <span class="marginAdd">
-            <xsl:apply-templates/>
+    <xsl:template match="tei:hi[@rend='supralinear']">
+    <span class="supraAdd" style="vertical-align: super;">
+        <xsl:apply-templates/>
+    </span>
+    </xsl:template>
+
+    <xsl:template match="tei:hi[@rend='underline']">
+    <span class="underline">
+        <xsl:apply-templates/>
+    </span>
+    </xsl:template>
+
+    <xsl:template match="tei:metamark[@function='pagenumber']">
+        <div class="right-align">
+            <span class="circled" hand="{tei:num/@hand}">
+                <xsl:value-of select="tei:num"/>
+            </span>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="tei:hi[@rend='circled']">
+    <div class="right-align">  <!-- Added div with right-align for page number -->
+        <span class="circled" hand="{@hand}">
+            <xsl:value-of select="."/>
         </span>
+    </div>
+    </xsl:template>
+
+    <xsl:template match="tei:hi[@rend='circled']">
+    <span class="circled" hand="{@hand}">
+        <xsl:apply-templates/>
+    </span>
     </xsl:template>
     
     <xsl:template match="tei:del">
@@ -62,16 +97,58 @@
             <xsl:apply-templates/>
         </del>
     </xsl:template>
+    <xsl:template match="tei:hi[@rend='underline']">
+    <span class="underline" hand="{@hand}">
+        <xsl:apply-templates/>
+    </span>
+    </xsl:template>
+        <xsl:template match="tei:hi[@rend='doubleUnderline']">
+    <span class="doubleUnderline" hand="{@hand}">
+        <xsl:apply-templates/>
+    </span>
+    </xsl:template>
+    
     
     <!-- all the supralinear additions are given in a span with the class supraAdd, make sure to put this class in superscript in the CSS file, -->
     <xsl:template match="tei:add[@place = 'supralinear']">
-        <span class="supraAdd">
+        <span class="supraAdd" hand="{@hand}">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="tei:add[@place = 'marginleft']">
+        <span class="marginAdd" hand="{@hand}" style="font-style: italic;">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     
+    <xsl:template match="tei:del">
+    <span class="change del">
+        <xsl:apply-templates/>
+    </span>
+    </xsl:template>
+
+    <xsl:template match="tei:add">
+    <span class="add" hand="{@hand}" style=" font-style: italic;">
+        <xsl:apply-templates/>
+    </span>
+    </xsl:template>
+
+    <xsl:template match="tei:del">
+        <span class="del" hand="{@hand}" style=" font-style: italic;">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="tei:add[@place='supralinear']">
+        <span class="supraAdd" hand="{@hand}">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
     
     <!-- add additional templates below, for example to transform the tei:lb in <br/> empty elements, tei:hi[@rend = 'sup'] in <sup> elements, the underlined text, additions with the attribute "overwritten" etc. -->
-
+    <xsl:template match="tei:lb">
+        <br/>
+    </xsl:template>
     
 </xsl:stylesheet>

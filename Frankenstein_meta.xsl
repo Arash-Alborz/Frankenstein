@@ -17,13 +17,27 @@
                          </div>
                          <div class="col">
                             <ul> 
+                                <li>Total number of words:
+                                <xsl:variable name="text" select="normalize-space(string(//tei:body))" />
+                                <xsl:value-of select="string-length($text) - string-length(translate($text, ' ', '')) + 1" />
+                                </li>
                                 <li>Total number of modifications: 
-                                    <xsl:value-of select="count(//tei:del|//tei:add)" /> <!-- Counts all the add and del elements, and puts it in a list item -->
+                                    <xsl:value-of select="count(//tei:del|//tei:add)" />
+                                </li>
+                                <li>Modifications by Mary Shelley:
+                                <xsl:value-of select="count(//tei:add[@hand='#MWS'] | //tei:del[@hand='#MWS'])" />
+                                </li>
+                                <li>Modifications by Percy Shelley:
+                                <xsl:value-of select="count(//tei:add[@hand='#PBS'] | //tei:del[@hand='#PBS'])" />
                                 </li>
                                 <li>Number of additions: 
-                                    <!-- count the additions only -->
+                                <xsl:value-of select="count(////tei:add)" />
                                 </li>
-                                <!-- add other list items in which you count things, such as the modifications made by Percy -->
+                                 <li>Number of deletions: 
+                                <xsl:value-of select="count(////tei:del)" />
+                                </li>
+                                
+                                </li>
                             </ul>
                         </div>
                      </div>
