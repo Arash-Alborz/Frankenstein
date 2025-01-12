@@ -5,8 +5,19 @@ body {
 }
 
 .navbar {
-    background: linear-gradient(to right, #7c917d, #7c917d);
+    background: linear-gradient(to right, #6297d3, #7c917d);
     color: rgb(13, 7, 7);
+}
+
+
+h1 {
+    font-family: "Georgia", serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #4a4a4a;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .starter-template {
@@ -21,19 +32,30 @@ img {
 
 .image-container {
     display: flex;
-    justify-content: space-between;
-    margin: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
 }
 
 .mary-photo, .percy-photo {
-    width: 250px;
+    width: 150px;
     height: auto;
+    margin-bottom: 15px;
     border-radius: 5px;
-    margin: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+p {
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #4a4a4a;
+    margin: 10px 0;
 }
 
-p {
-    text-indent: 10px;
+.content-section {
+    margin-top: -25px;
+    text-align: left;
 }
 
 .row {
@@ -81,7 +103,25 @@ a {
     text-decoration: none;
 }
 
-.supraAdd {
+
+a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+
+a:visited {
+    color: #551a8b;
+}
+
+a:active {
+    color: #ff4500;
+}.supraAdd {
     font-family: "Georgia", sans-serif;
     font-style: italic;
     vertical-align: super;
@@ -100,7 +140,7 @@ a {
     position: absolute;
     right: 0;
     top: 0;
-    margin-right: 10px; /* Optional: adjust to create spacing */
+    margin-right: 10px;
 }
 
 .underline {
@@ -109,11 +149,11 @@ a {
 
 .navigation-buttons {
     display: flex;
-    justify-content: flex-end; /* Align to the right */
-    margin: 10px 20px; /* Adjust spacing */
-    gap: 10px; /* Space between buttons */
+    justify-content: flex-end;
+    margin: 10px 20px;
+    gap: 10px;
     position: relative;
-    z-index: 1000; /* Ensure it stays above the navbar */
+    z-index: 1000;
 }
 
 .navigation-buttons .btn {
@@ -121,7 +161,7 @@ a {
     font-size: 16px;
     text-decoration: none;
     color: white;
-    background-color: #007bff; /* Bootstrap blue */
+    background-color: #007bff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -129,18 +169,18 @@ a {
 }
 
 .navigation-buttons .btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
 .circled {
     display: inline-block;
-    width: 2em;  /* Adjust size */
+    width: 2em;
     height: 2em;
     line-height: 1.5em;
     border: 2px solid rgb(49, 46, 46);
-    border-radius: 50%;  /* Perfect circle */
+    border-radius: 50%;
     text-align: center;
-    font-size: 1em;  /* Adjust text size */
+    font-size: 1em;
     vertical-align: middle;
 }
 
@@ -149,8 +189,8 @@ button {
     margin: 5px;
     font-size: 13px;
     cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #86a987;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
   }
@@ -161,11 +201,11 @@ button {
 
 
   #folio {
-    color: rgb(70, 34, 34);
+    color: rgb(148, 10, 10);
     position: relative;
-    top: 200px;  /* Adjust the value to move it down */
-    left: 660px; /* Adjust the value to move it to the right */
-    font-size: 18px; 
+    top: 200px;
+    left: 660px;
+    font-size: 16px; 
     font-weight: bold
   }
 
@@ -173,14 +213,14 @@ button {
     display: flex;
     margin-top: 10px;
     margin-bottom: 20px;
-    margin-left: 650px; /* Move buttons slightly to the right */
-    gap: 10px; /* Space between buttons */
+    margin-left: 650px;
+    gap: 10px;
 }
 
 #prev-page,
 #next-page {
-    background-color: #4CAF50; /* Same background as other buttons */
-    color: white; /* Text color */
+    background-color: #86a987;
+    color: rgb(0, 0, 0);
     border-radius: 5px;
     padding: 6px 15px;
     margin: 5px;
@@ -190,5 +230,5 @@ button {
 
 #prev-page:hover,
 #next-page:hover {
-    background-color: #45a049; /* Hover effect same as other buttons */
+    background-color: #45a049;
 }

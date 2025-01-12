@@ -49,7 +49,6 @@
         </div>
     </xsl:template>
 
-    <!-- Formatting Templates -->
     <xsl:template match="tei:hi[@rend='supralinear']">
         <span class="supraAdd" style="vertical-align: super;">
             <xsl:apply-templates/>
@@ -74,7 +73,6 @@
         </span>
     </xsl:template>
 
-    <!-- Metadata Templates -->
     <xsl:template match="tei:metamark[@function='pagenumber']">
         <div class="right-align">
             <span class="circled" hand="{tei:num/@hand}">
@@ -83,7 +81,6 @@
         </div>
     </xsl:template>
 
-    <!-- Additions and Deletions -->
     <xsl:template match="tei:add[@place='supralinear']">
         <span class="supraAdd" hand="{@hand}">
             <xsl:apply-templates/>
@@ -114,15 +111,8 @@
         </span>
     </xsl:template>
 
-    <!-- Line Break -->
     <xsl:template match="tei:lb">
         <br/>
     </xsl:template>
     
 </xsl:stylesheet>
-
-<!-- all the supralinear additions are given in a span with the class supraAdd, make sure to put this class in superscript in the CSS file, -->
-
-<!-- add additional templates below, for example to transform the tei:lb in <br/> empty elements, tei:hi[@rend = 'sup'] in <sup> elements, the underlined text, additions with the attribute "overwritten" etc. -->
-
-<!-- <xsl:output method="xml" omit-xml-declaration="yes" indent="yes" /> -->
