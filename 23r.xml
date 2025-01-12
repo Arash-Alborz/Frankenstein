@@ -20,7 +20,7 @@
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Draft of Frankenstein, [August or September] – [?December] 1816. | Bodleian MS. 
+            <p>Draft of Frankenstein, 1816. | Bodleian MS. 
                Abinger c.56 (formerly designated Dep. 477/1) consists of 62 leaves originally 
                bound in Notebook A, one of two now disbound notebooks in which Mary W. Shelley 
                (MWS) drafted the two-volume version of Frankenstein. The draft in c.56 runs 
@@ -34,7 +34,7 @@
          <div type="page" n="23r" rend="recto">
             <pb facs="#p23r"/>
                    
-            <metamark function="pagenumber" hand="#MWS"><num><hi rend="circled" hand="#MWS">79</hi></num></metamark><lb/><lb/>
+            <metamark function="pagenumber" hand="#MWS"><num hand="#MWS"><hi rend="circled" hand="#MWS">79</hi></num></metamark><lb/><lb/>
             <p>
                my view. I did not dare <del type="crossedOut" hand="#MWS" rend="blackink">to</del> return<lb/>
                to the appartment <add place="intralinear" hand="#MWS" rend="blackink">^</add><add place="supralinear" hand="#MWS" rend="blackink">which</add> I inhabited but<lb/>
@@ -53,7 +53,7 @@
                on with irregular steps not daring<lb/>
                to look about me,<lb/>
             </p>
-            <list><item>"Like one who on a lon<del type="crossedOut" hand="#MWS" rend="blackink">s</del>esome road</item><lb/>
+            <list hand="#MWS"><item>"Like one who on a lon<del type="crossedOut" hand="#MWS" rend="blackink">s</del>esome road</item><lb/>
             <item>"doth walk in fear and dread</item><lb/>
             <item>"and having once turned round</item><lb/>
                <item>"<del type="crossedOut" hand="#MWS" rend="blackink">wal</del>And turns no more his head</item><lb/>

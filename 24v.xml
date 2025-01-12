@@ -20,7 +20,7 @@
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Draft of Frankenstein, [August or September] – [?December] 1816. | Bodleian MS. 
+            <p>Draft of Frankenstein, 1816. | Bodleian MS. 
                Abinger c.56 (formerly designated Dep. 477/1) consists of 62 leaves originally 
                bound in Notebook A, one of two now disbound notebooks in which Mary W. Shelley 
                (MWS) drafted the two-volume version of Frankenstein. The draft in c.56 runs 
@@ -33,7 +33,7 @@
       <body>
          <div type="page" n="24v" rend="verso">
             <pb facs="#p24v"/>
-            <metamark function="pagenumber" hand="#MWS"><num><hi rend="circled" hand="#MWS">82</hi></num></metamark><lb/><lb/>
+            <metamark function="pagenumber" hand="#MWS"><num hand="#MWS"><hi rend="circled" hand="#MWS">82</hi></num></metamark><lb/><lb/>
          <p>
             "see<add place="intralinear" hand="#PBS" rend="blackink">;</add> but I hope<add place="intralinear" hand="#PBS" rend="blackink">,</add> I sincerely hope all those<lb/>
             "occupations are at an end—I am free<lb/>

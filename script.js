@@ -158,6 +158,67 @@ function toggleReadingVersion() {
 
 document.getElementById('toggle-reading').addEventListener('click', toggleReadingVersion);
 
+document.getElementById('next-page').addEventListener('click', function () {
+  let currentFolio = document.getElementById('folio').innerText;
+  let currentPageNumber = parseInt(currentFolio.match(/\d+/)[0]);
+  let currentSide = currentFolio.slice(-1); // Get the last character ('r' or 'v')
+
+  // Check if next page exists
+  if (currentPageNumber < 25 || (currentPageNumber === 25 && currentSide === 'r')) {
+    let nextPageNumber = currentPageNumber;
+    let nextSide = (currentSide === 'r') ? 'v' : 'r'; // Switch between 'r' and 'v'
+
+    // If we're on 'r', go to the next verso page ('v')
+    // If we're on 'v', go to the next recto page ('r')
+    if (currentSide === 'r') {
+      nextSide = 'v';
+    } else if (currentPageNumber < 25) {
+      nextPageNumber += 1; // If we're on 'v' and not on the last page, go to the next recto page number
+      nextSide = 'r';
+    }
+
+    // Handle the case where we're on the last recto page (25r)
+    if (currentPageNumber === 25 && currentSide === 'r') {
+      nextPageNumber = 25;  // Keep the page number as 25
+      nextSide = 'v'; // Go to 25v
+    }
+
+    let nextPage = document.getElementById('folio');
+    nextPage.innerText = nextPageNumber + nextSide; // Update the page number and side
+    window.location.href = nextPageNumber + nextSide + ".html"; // Update the URL with the correct page
+  }
+});
+
+document.getElementById('prev-page').addEventListener('click', function () {
+  let currentFolio = document.getElementById('folio').innerText;
+  let currentPageNumber = parseInt(currentFolio.match(/\d+/)[0]);
+  let currentSide = currentFolio.slice(-1); // Get the last character ('r' or 'v')
+
+  // Check if previous page exists
+  if (currentPageNumber > 21 || (currentPageNumber === 21 && currentSide === 'v')) {
+    let prevPageNumber = currentPageNumber;
+    let prevSide = (currentSide === 'r') ? 'v' : 'r'; // Switch between 'r' and 'v'
+
+    // If we're on 'v', go to the previous recto page ('r')
+    // If we're on 'r', go to the previous verso page ('v')
+    if (currentSide === 'v') {
+      prevSide = 'r';
+    } else if (currentPageNumber > 21) {
+      prevPageNumber -= 1; // If we're on 'r' and not on the first page, go to the previous verso page number
+      prevSide = 'v';
+    }
+
+    // Handle the case where we're on the last verso page (25v)
+    if (currentPageNumber === 25 && currentSide === 'v') {
+      prevPageNumber = 25;  // Keep the page number as 25
+      prevSide = 'r'; // Go to 25r
+    }
+
+    let prevPage = document.getElementById('folio');
+    prevPage.innerText = prevPageNumber + prevSide; // Update the page number and side
+    window.location.href = prevPageNumber + prevSide + ".html"; // Update the URL with the correct page
+  }
+});
 
 // write another function that will toggle the display of the deletions by clicking on a button
 // EXTRA: write a function that will display the text as a reading text by clicking on a button or another dropdown list, meaning that all the deletions are removed and that the additions are shown inline (not in superscript)

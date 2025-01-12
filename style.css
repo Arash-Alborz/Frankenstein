@@ -158,3 +158,37 @@ button {
   button:hover {
     background-color: #45a049;
   }
+
+
+  #folio {
+    color: rgb(70, 34, 34);
+    position: relative;
+    top: 200px;  /* Adjust the value to move it down */
+    left: 660px; /* Adjust the value to move it to the right */
+    font-size: 18px; 
+    font-weight: bold
+  }
+
+  .page-navigation {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 650px; /* Move buttons slightly to the right */
+    gap: 10px; /* Space between buttons */
+}
+
+#prev-page,
+#next-page {
+    background-color: #4CAF50; /* Same background as other buttons */
+    color: white; /* Text color */
+    border-radius: 5px;
+    padding: 6px 15px;
+    margin: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#prev-page:hover,
+#next-page:hover {
+    background-color: #45a049; /* Hover effect same as other buttons */
+}
