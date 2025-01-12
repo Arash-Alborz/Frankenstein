@@ -9,7 +9,6 @@ body {
     color: rgb(13, 7, 7);
 }
 
-
 h1 {
     font-family: "Georgia", serif;
     font-size: 36px;
@@ -21,8 +20,8 @@ h1 {
 }
 
 .starter-template {
-  padding: 40px 15px;
-  text-align: center;
+    padding: 40px 15px;
+    text-align: center;
 }
 
 img {
@@ -44,6 +43,7 @@ img {
     border-radius: 5px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
+
 p {
     font-family: "Georgia", serif;
     font-size: 18px;
@@ -64,8 +64,7 @@ p {
 }
 
 .col {
-  margin-left: 10px;
-  margin-right: 10px;
+    margin: 0 10px;
 }
 
 .marginAdd {
@@ -99,12 +98,6 @@ p {
 }
 
 a {
-    color: #0c0c06;
-    text-decoration: none;
-}
-
-
-a {
     color: #007bff;
     text-decoration: underline;
 }
@@ -114,14 +107,15 @@ a:hover {
     text-decoration: none;
 }
 
-
 a:visited {
     color: #551a8b;
 }
 
 a:active {
     color: #ff4500;
-}.supraAdd {
+}
+
+.supraAdd {
     font-family: "Georgia", sans-serif;
     font-style: italic;
     vertical-align: super;
@@ -193,23 +187,22 @@ button {
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #45a049;
-  }
+}
 
-
-  #folio {
+#folio {
     color: rgb(148, 10, 10);
     position: relative;
     top: 200px;
     left: 660px;
-    font-size: 16px; 
-    font-weight: bold
-  }
+    font-size: 16px;
+    font-weight: bold;
+}
 
-  .page-navigation {
+.page-navigation {
     display: flex;
     margin-top: 10px;
     margin-bottom: 20px;
